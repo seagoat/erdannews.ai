@@ -15,12 +15,19 @@
 We've designed this project to be as easy to deploy as possible. **You do NOT need to have Python installed or configure any environment variables.**
 
 ### 1. Start the System
-For Windows users, simply download the source code and double-click the batch scripts in the directory:
+#### Windows
+Download the source code and double-click the batch scripts in the directory:
 
-*   **`start_all.bat` (Recommended)**: One-click start. If it's your first time running, the terminal will automatically download an isolated Python environment and all dependencies. Wait a moment, and your browser will automatically open the Web UI, while the background scheduler runs in a separate terminal.
-*   **`debug_scraper.bat`**: Manually force a single run of the scraper and AI summarizer (useful for debugging).
-*   **`start_web.bat`**: Start the Web UI only.
-*   **`start_scheduler.bat`**: Start the background scheduler only.
+*   **`start_all.bat` (Recommended)**: One-click start. If it's your first time running, the terminal will automatically download an isolated Python environment and all dependencies.
+*   **`debug_scraper.bat`**: Manually force a single run of the scraper and AI summarizer.
+
+#### macOS / Linux
+Open your terminal, navigate to the project directory, and run:
+
+1.  **Grant execution permission**: `chmod +x *.sh`
+2.  **Start the system**: `./start_all.sh`
+
+*Note: If it's your first time running, the script will automatically install [uv](https://github.com/astral-sh/uv) and set up an isolated Python environment for you.*
 
 *(Note: The system uses the lightning-fast package manager [uv](https://github.com/astral-sh/uv) to build isolated environments, completely safeguarding your system from conflicts.)*
 

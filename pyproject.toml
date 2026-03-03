@@ -1,0 +1,15 @@
+[project]
+name = "erdan-news"
+version = "0.1.0"
+description = "Daily news aggregator and summarizer"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.41.0",
+    "requests>=2.32.3",
+    "beautifulsoup4>=4.12.3",
+    "feedparser>=6.0.11",
+    "schedule>=1.2.2",
+    "google-genai>=0.3.0",
+    "sqlalchemy>=2.0.38",
+    "python-dotenv>=1.0.1"
+]

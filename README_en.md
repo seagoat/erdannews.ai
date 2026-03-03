@@ -10,25 +10,21 @@
 *   **🛠️ Mock Mode**: If an API Key is not configured, the system automatically falls back to a mock mode, displaying the raw scraped content directly, making initial setup and debugging a breeze.
 *   **📦 Minimalist Deployment**: Uses `uv` for lightning-fast package management and local SQLite for storage. No complex infrastructure required.
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Truly Out of the Box)
 
-This project uses `uv` to manage the virtual environment and dependencies.
+We've designed this project to be as easy to deploy as possible. **You do NOT need to have Python installed or configure any environment variables.**
 
-### 1. Install Dependencies
-```bash
-# Ensure you have uv installed (https://github.com/astral-sh/uv)
-uv sync
-```
+### 1. Start the System
+For Windows users, simply download the source code and double-click the batch scripts in the directory:
 
-### 2. Start the System
-We provide several convenient batch scripts for Windows users:
-
-*   **`start_all.bat` (Recommended)**: One-click start for both the "Background Scheduler" and the "Web UI".
+*   **`start_all.bat` (Recommended)**: One-click start. If it's your first time running, the terminal will automatically download an isolated Python environment and all dependencies. Wait a moment, and your browser will automatically open the Web UI, while the background scheduler runs in a separate terminal.
 *   **`debug_scraper.bat`**: Manually force a single run of the scraper and AI summarizer (useful for debugging).
 *   **`start_web.bat`**: Start the Web UI only.
 *   **`start_scheduler.bat`**: Start the background scheduler only.
 
-### 3. Configure the System (via Web UI)
+*(Note: The system uses the lightning-fast package manager [uv](https://github.com/astral-sh/uv) to build isolated environments, completely safeguarding your system from conflicts.)*
+
+### 2. Configure the System (via Web UI)
 1. Run `start_all.bat`, and your browser will automatically open the web app (usually at `http://localhost:8501`).
 2. Navigate to the **"⚙️ 系统配置" (System Configuration)** tab.
 3. Enter your `GEMINI_API_KEY` in the API Key section (leave blank to experience the mock mode).
